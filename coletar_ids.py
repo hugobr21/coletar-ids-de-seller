@@ -40,9 +40,9 @@ options = Options()
 # options.add_argument(profile_path)
 options.binary_location = carregarParametros()["caminhonavegador"]
 driver = webdriver.Firefox(options=options)
-driver.get('https://envios.mercadolivre.com.br/logistics/routing/planification/download')
+driver.get('https://tms.mercadolivre.com.br')
 
-input('Após logar no logistics, pressione ENTER para continuar...\n')
+input('Após logar no TMS, pressione ENTER para continuar...\n')
 
 while True:
 	try:
