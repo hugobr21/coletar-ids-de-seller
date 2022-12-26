@@ -16,7 +16,7 @@ def carregarParametros():
 def funcaoPrincipal():
 	tabela_id_pacote_id_seller = pd.DataFrame({'ID Pacote':[],'ID Seller':[]})
 	lista_de_ids = pd.read_clipboard()
-	for id in lista_de_ids:
+	for id in lista_de_ids[lista_de_ids.columns[0]]:
 		driver.get(f'https://tms.mercadolivre.com.br/packages/{id}/detail')
 		for i in range(10):
 			time.sleep(1)
