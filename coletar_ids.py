@@ -22,6 +22,7 @@ def funcaoPrincipal():
 			time.sleep(1)
 			try:
 				id_seller = driver.find_elements(By.CLASS_NAME, 'collapsible-info__value')[2].text
+				break
 			except:
 				pass
 		novalinha = pd.DataFrame({'ID Pacote':[id],'ID Seller':[id_seller]})
@@ -47,6 +48,7 @@ input('Após logar no TMS, pressione ENTER para continuar...\n')
 while True:
 	try:
 		funcaoPrincipal()
+		break
 	except:
 		if debug_mode:
 			print(traceback.format_exc())
