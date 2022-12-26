@@ -31,7 +31,7 @@ def funcaoPrincipal():
 	
 diretorio_robo = os.getcwd()
 user_name = os.getlogin()
-debug_mode = False
+debug_mode = True
 
 print('Abrindo driver Firefox')
 # profile_path = carregarParametros()["perfilFirefox"]
@@ -48,4 +48,6 @@ while True:
 	try:
 		funcaoPrincipal()
 	except:
+		if debug_mode:
+			print(traceback.format_exc())
 		pass
