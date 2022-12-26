@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
-from google_api_functions import *
 from datetime import datetime 
 import pandas as pd
 import traceback
