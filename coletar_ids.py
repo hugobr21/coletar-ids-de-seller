@@ -28,6 +28,7 @@ def funcaoPrincipal():
 		novalinha = pd.DataFrame({'ID Pacote':[id],'ID Seller':[id_seller]})
 		tabela_id_pacote_id_seller = pd.concat([tabela_id_pacote_id_seller,novalinha])
 	time_agora = time.strftime('%d_%m_%Y %H_%M_%S')
+	tabela_id_pacote_id_seller['ID Seller'] = tabela_id_pacote_id_seller['ID Seller'].astype('int32')
 	tabela_id_pacote_id_seller.to_excel(f'IDs de Sellers - {time_agora}.xlsx')
 	
 diretorio_robo = os.getcwd()
